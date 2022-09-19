@@ -1,0 +1,21 @@
+.results{
+    position: absolute;
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    left:  50%;
+    transform: translateX(-50%) translateY(-50%);
+    gap: 5rem;
+    border-radius: 20px;
+    height: fit-content;
+}
+.results > div {
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+small{
+    color: var(--color-darkgrey);
+}
