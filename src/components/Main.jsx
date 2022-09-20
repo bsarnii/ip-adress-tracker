@@ -1,25 +1,42 @@
 import "./Main.css"
+import { useContext } from "react";
 import Results from "./Results";
 import Leaflet from "leaflet";
 import iconUrl from "../images/icon-location.svg";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer, useMap } from "react-leaflet";
+import DataContext from "../context/DataContext";
+
+const ChangeView = () =>{
+  const dataValue= useContext(DataContext)
+  const map = useMap();
+  map.setView([dataValue.lat,dataValue.lng])
+  return null
+}
 
 const Main = () => {
+  const dataValue= useContext(DataContext)
+
   const newicon = new Leaflet.Icon({
     iconUrl,
     iconSize: [46,56]
   })
-
   return (
     <main>
         <Results />
+            {dataValue.display=== false ?
+            <div>
+              <div className="lds-dual-ring"></div>
+            </div>  
+            :
             <MapContainer style={{height: "100%", width: "100%"}}
-              center={[50.11552,8.68417]} zoom={13} scrollWheelZoom={false}>
+              center={[dataValue.lat, dataValue.lng]} zoom={13} scrollWheelZoom={false}>
+              <ChangeView/>
               <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
-              <Marker icon={newicon} position={[50.11552,8.68417]}>
+              <Marker icon={newicon} position={[dataValue.lat,dataValue.lng]}>
               </Marker>
             </MapContainer>
+            }
     </main>
   )
 }
