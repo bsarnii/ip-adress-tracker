@@ -30,7 +30,7 @@ header > form {
     border-right: none;
 }
 button{
-    background-color: var(--color-black);
+    background-color: #000000;
     width:5rem;
     height: 100%;
     border: none;
@@ -39,5 +39,5 @@ button{
     cursor: pointer;
 }
 button:hover{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--color-black);
 }
