@@ -99,7 +99,7 @@ small{
     }
 }
 
-@media screen and (max-width: 700px) and (max-height: 600px) {
+@media screen and (max-width: 700px) and (max-height: 500px) {
     .results{
         display: none;
     }
