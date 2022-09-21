@@ -81,7 +81,7 @@ small{
         padding: 0.5rem 2rem;
     }
     small{
-        font-size: 12px;
+        font-size: 10px;
     }
     .results > div {
         border:none;
@@ -89,13 +89,19 @@ small{
         padding: 0.2rem 1rem;
     }
     .results > div > h1{
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
 @media screen and (max-width: 390px) {
     .results{
         transform: translateX(-50%) translateY(-35%);
+    }
+}
+
+@media screen and (max-width: 700px) and (max-height: 600px) {
+    .results{
+        display: none;
     }
 }
 
