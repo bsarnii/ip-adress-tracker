@@ -12,7 +12,7 @@ const Results = () => {
         : 
         <><div className="ip-address">
                       <small>IP ADDRESS</small>
-                      <h1>{dataValue.ip} <span style={{ opacity: "0" }}>yes</span></h1>
+                      <h1>{dataValue.ip}</h1>
                   </div><div className="location">
                           <small>LOCATION</small>
                           <h1>{dataValue.city}, {dataValue.region}</h1>

@@ -9,7 +9,11 @@ const Header = ({dataFromApp}) => {
     e.preventDefault()
     const config = {
       method: "get",
-      url: `https://geo.ipify.org/api/v2/country,city?apiKey=at_RfKC13rCGRPknY70jhLVO4zQ4iuRT&ipAddress=${inputRef.current.value}`
+      url: `https://geo.ipify.org/api/v2/country,city?apiKey=at_RfKC13rCGRPknY70jhLVO4zQ4iuRT`,
+      params: {
+        ipAddress: inputRef.current.value,
+        domain: inputRef.current.value
+      }
     }
     axios.request(config).then(resp => {
       dataFromApp(resp.data)

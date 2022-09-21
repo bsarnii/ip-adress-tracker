@@ -17,9 +17,10 @@ header > h1 {
 header > form {
     margin: 0 auto;
     text-align: center;
-    height: 4rem;
+    height: 3rem;
 }
 .ip-input{
+    color: var(--color-black);
     font-size: 18px;
     padding: 1rem;
     width: 30rem;
@@ -40,4 +41,30 @@ button{
 }
 button:hover{
     background-color: var(--color-black);
+}
+
+@media screen and (max-width: 700px) {
+    header{
+        height: 35%;
+    }
+    header > h1 {
+        font-size: 1.7rem;
+    }
+    form{
+        width:90%;
+    }
+    .ip-input{
+        width: 85%;
+        font-size: 16px;
+        padding: 1.5rem;
+    }
+    button{
+        width: 15%
+    }
+}
+
+@media screen and (max-width: 300px) {
+    header > h1 {
+        font-size: 1.2rem;
+    }
 }

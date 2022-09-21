@@ -25,7 +25,7 @@ const Main = () => {
         <Results />
             {dataValue.display=== false ?
             <div>
-              <div className="lds-dual-ring"></div>
+              <div className="lds-dual-ring-big ring-center"></div>
             </div>  
             :
             <MapContainer style={{height: "100%", width: "100%"}}
