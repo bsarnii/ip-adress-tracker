@@ -11,19 +11,19 @@ const Results = () => {
     <section className="results">
         <div className="ip-address">
             <small>IP ADDRESS</small>
-            <h1>{dataValue.ip}</h1>
+            <h2>{dataValue.ip}</h2>
             </div>
             <div className="location">
             <small>LOCATION</small>
-            <h1>{dataValue.city}, {dataValue.region}</h1>
+            <h2>{dataValue.city}, {dataValue.region}</h2>
             </div>
             <div className="timezone">
             <small>TIMEZONE</small>
-            <h1>UTC {dataValue.timezone}</h1>
+            <h2>UTC {dataValue.timezone}</h2>
             </div>
             <div className="isp">
             <small>ISP</small>
-            <h1>{dataValue.isp}</h1>
+            <h2>{dataValue.isp}</h2>
             </div>
     </section>
     }
