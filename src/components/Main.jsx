@@ -1,10 +1,12 @@
 import "./Main.css"
-import { useContext } from "react";
+import react,{ useContext } from "react";
 import Results from "./Results";
 import Leaflet from "leaflet";
 import iconUrl from "../images/icon-location.svg";
 import { MapContainer, Marker, TileLayer, useMap } from "react-leaflet";
 import DataContext from "../context/DataContext";
+import {ReactComponent as ErrorSvg} from "../images/error-symbol.svg";
+
 
 const ChangeView = () =>{
   const dataValue= useContext(DataContext)
@@ -23,9 +25,13 @@ const Main = () => {
   return (
     <main>
         <Results />
-            {dataValue.display=== false ?
+            {dataValue.display=== false ?  
             <div>
               <div className="lds-dual-ring-big ring-center"></div>
+            </div>  
+            : dataValue.error === true ?
+            <div style={{width: "100%", height: "100%", backgroundColor: "var(--color-black)"}}>
+              <ErrorSvg className="error-svg"/>
             </div>  
             :
             <MapContainer style={{height: "100%", width: "100%"}}

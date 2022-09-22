@@ -7,7 +7,9 @@ import { useState, useEffect } from 'react';
 
 function App() {
 const callback = (childData) => {
+  childData.error === true ? setApiDataa({display:true,error:true}) :
    setApiDataa({
+          error: false,
           display: true,
           ip: childData.ip,
           city: childData.location.city,

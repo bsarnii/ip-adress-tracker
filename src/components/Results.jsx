@@ -7,7 +7,12 @@ const Results = () => {
 
   return (
     <>
-    {dataValue.display === false ? "" : 
+    {dataValue.display === false ? "" 
+    : dataValue.error === true ? 
+      <h2 className="error">
+      Something went wrong!
+      </h2>
+    :
     <section className="results">
         <div className="ip-address">
             <small>IP ADDRESS</small>

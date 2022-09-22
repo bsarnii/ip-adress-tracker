@@ -17,7 +17,7 @@ const Header = ({dataFromApp}) => {
     }
     axios.request(config).then(resp => {
       dataFromApp(resp.data)
-    })
+    }).catch((error)=> dataFromApp({error:true}))
   }
 
   return (
