@@ -1,5 +1,5 @@
 import "./Main.css"
-import react,{ useContext } from "react";
+import { useContext } from "react";
 import Results from "./Results";
 import Leaflet from "leaflet";
 import iconUrl from "../images/icon-location.svg";
